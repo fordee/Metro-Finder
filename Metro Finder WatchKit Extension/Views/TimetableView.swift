@@ -10,6 +10,7 @@ import Combine
 
 struct TimetableView: View {
   let stop: String
+  let displayAllStops: Bool
   
   @State private var fetchState = FetchState.fetching
   @State private var request: AnyCancellable?
@@ -25,9 +26,6 @@ struct TimetableView: View {
         case .success:
           List {
             ForEach(services) { departure in
-//              DepartureCellView(service: departure.ServiceID,
-//                                time: departure.ExpectedDeparture ?? departure.AimedArrival ?? "No Time",
-//                                onTime: departure.DepartureStatus ?? "")
               ServiceRowView(service: departure)
             }
             .listRowBackground(Color.clear)
@@ -70,7 +68,11 @@ struct TimetableView: View {
       // fetch succeeded!
       fetchState = .success
     }
-    services = filterBy(serviceIDs: ["52", "56", "57", "58"], services: result.services)
+    if displayAllStops {
+      services = result.services
+    } else {
+      services = filterBy(serviceIDs: ["52", "56", "57", "58"], services: result.services)
+    }
   }
   
   private func filterBy(serviceIDs: [String], services: [BusTrainService]) -> [BusTrainService] {
@@ -89,6 +91,6 @@ struct TimetableView: View {
 struct TimetableView_Previews: PreviewProvider {
   static var previews: some View {
     //let store = Store()
-    return TimetableView(stop: "5012")
+    return TimetableView(stop: "5012", displayAllStops: false)
   }
 }

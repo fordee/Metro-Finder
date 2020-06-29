@@ -13,7 +13,8 @@ enum FetchState {
 }
 
 struct ContentView: View {
-  @State var currentStop: String = "3546"
+  @State var currentStop = "3546"
+  @State var displayAllStops = false
   
   let stops: [MetStop] = [
     MetStop(stopNumber: 3546, stopName: "Newlands Road"),
@@ -27,7 +28,6 @@ struct ContentView: View {
   
   
   var body: some View {
-    
     VStack {
       Picker(selection: $currentStop, label: EmptyView()) {
         ForEach(stops) { stop in
@@ -35,10 +35,15 @@ struct ContentView: View {
         }
       }
       .frame(minHeight: 44, maxHeight: 44)
-      NavigationLink(destination: TimetableView(stop: currentStop)) {
+      NavigationLink(destination: TimetableView(stop: currentStop, displayAllStops: displayAllStops)) {
         Label("Refresh", systemImage: "arrow.counterclockwise.circle")
           .imageScale(.large)
       }
+      //Spacer()
+      Toggle(isOn: $displayAllStops) {
+        Text("Display All Stops")
+      }
+      .padding()
     }
     
   }
