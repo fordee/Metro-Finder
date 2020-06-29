@@ -13,8 +13,8 @@ enum FetchState {
 }
 
 struct ContentView: View {
-  @State var currentStop = "3546"
-  @State var displayAllStops = false
+  @AppStorage("currentStop") private var currentStop = "3546"
+  @AppStorage("displayAllStops") private var displayAllStops = false
   
   let stops: [MetStop] = [
     MetStop(stopNumber: 3546, stopName: "Newlands Road"),
