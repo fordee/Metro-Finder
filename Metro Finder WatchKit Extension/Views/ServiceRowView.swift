@@ -35,12 +35,14 @@ struct ServiceRowView: View {
               .foregroundColor(Color.white)
               .font(.system(size: 24 * multiplier))
               .fontWeight(.bold)
+              .lineLimit(1)
               .padding(.trailing, 16 * multiplier)
             Text(service.departureStatus ?? "no status")
               .foregroundColor(Color.white)//.opacity(0.8)
               .font(.system(size: 16 * multiplier))
               .fontWeight(.bold)
               .padding(.trailing, 16 * multiplier)
+              .frame(width: 60)
           }
           Text(service.destinationStopName ?? "Courtenay Pl")
             .foregroundColor(Color.white).opacity(0.8)
@@ -53,7 +55,6 @@ struct ServiceRowView: View {
     .padding(multiplier * 2)
     .background(Color(color))
     .cornerRadius(44 * multiplier)
-    .shadow(color: Color.black.opacity(0.4), radius: 3 * multiplier, x: 0, y: 3 * multiplier)
   }
 }
 
