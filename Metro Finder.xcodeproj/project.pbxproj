@@ -3,10 +3,14 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4940217A24A9060900AD26D6 /* ServiceRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4940217924A9060900AD26D6 /* ServiceRowView.swift */; };
+		4942E14324A671570010733F /* DepartureDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4942E14224A671570010733F /* DepartureDetails.swift */; };
+		4942E14624A672010010733F /* DepartureCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4942E14524A672010010733F /* DepartureCellView.swift */; };
+		495228FA24A8446800E7431F /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 495228F924A8446800E7431F /* Helpers.swift */; };
 		497001AF24A2717500EEF7C2 /* Metro Finder WatchKit App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 497001AE24A2717500EEF7C2 /* Metro Finder WatchKit App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		497001B424A2717700EEF7C2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 497001B324A2717700EEF7C2 /* Assets.xcassets */; };
 		497001BB24A2717700EEF7C2 /* Metro Finder WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 497001BA24A2717700EEF7C2 /* Metro Finder WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
@@ -17,6 +21,8 @@
 		497001C824A2717700EEF7C2 /* ComplicationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 497001C724A2717700EEF7C2 /* ComplicationController.swift */; };
 		497001CA24A2717800EEF7C2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 497001C924A2717800EEF7C2 /* Assets.xcassets */; };
 		497001CD24A2717800EEF7C2 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 497001CC24A2717800EEF7C2 /* Preview Assets.xcassets */; };
+		49FC537824A7EA8000DE6FBF /* TimetableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49FC537724A7EA8000DE6FBF /* TimetableView.swift */; };
+		49FC537D24A7F5A900DE6FBF /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = 49FC537C24A7F5A900DE6FBF /* ComposableArchitecture */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +68,10 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		4940217924A9060900AD26D6 /* ServiceRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceRowView.swift; sourceTree = "<group>"; };
+		4942E14224A671570010733F /* DepartureDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DepartureDetails.swift; sourceTree = "<group>"; };
+		4942E14524A672010010733F /* DepartureCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DepartureCellView.swift; sourceTree = "<group>"; };
+		495228F924A8446800E7431F /* Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helpers.swift; sourceTree = "<group>"; };
 		497001AA24A2717500EEF7C2 /* Metro Finder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Metro Finder.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		497001AE24A2717500EEF7C2 /* Metro Finder WatchKit App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Metro Finder WatchKit App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		497001B324A2717700EEF7C2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -76,6 +86,7 @@
 		497001CC24A2717800EEF7C2 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		497001CE24A2717800EEF7C2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		497001CF24A2717800EEF7C2 /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
+		49FC537724A7EA8000DE6FBF /* TimetableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimetableView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,18 +94,47 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				49FC537D24A7F5A900DE6FBF /* ComposableArchitecture in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4942E14124A671330010733F /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				4942E14224A671570010733F /* DepartureDetails.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		4942E14424A671B10010733F /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				497001C124A2717700EEF7C2 /* ContentView.swift */,
+				49FC537724A7EA8000DE6FBF /* TimetableView.swift */,
+				4942E14524A672010010733F /* DepartureCellView.swift */,
+				4940217924A9060900AD26D6 /* ServiceRowView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		495228F824A8445300E7431F /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				495228F924A8446800E7431F /* Helpers.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
 		497001A324A2717400EEF7C2 = {
 			isa = PBXGroup;
 			children = (
 				497001B224A2717500EEF7C2 /* Metro Finder WatchKit App */,
 				497001BE24A2717700EEF7C2 /* Metro Finder WatchKit Extension */,
 				497001AB24A2717500EEF7C2 /* Products */,
+				49FC537B24A7F5A900DE6FBF /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -120,8 +160,10 @@
 		497001BE24A2717700EEF7C2 /* Metro Finder WatchKit Extension */ = {
 			isa = PBXGroup;
 			children = (
+				495228F824A8445300E7431F /* Helpers */,
+				4942E14124A671330010733F /* Models */,
+				4942E14424A671B10010733F /* Views */,
 				497001BF24A2717700EEF7C2 /* Metro_FinderApp.swift */,
-				497001C124A2717700EEF7C2 /* ContentView.swift */,
 				497001C324A2717700EEF7C2 /* NotificationController.swift */,
 				497001C524A2717700EEF7C2 /* NotificationView.swift */,
 				497001C724A2717700EEF7C2 /* ComplicationController.swift */,
@@ -141,6 +183,13 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		49FC537B24A7F5A900DE6FBF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -157,6 +206,9 @@
 				497001B124A2717500EEF7C2 /* PBXTargetDependency */,
 			);
 			name = "Metro Finder";
+			packageProductDependencies = (
+				49FC537A24A7F45900DE6FBF /* ComposableArchitecture */,
+			);
 			productName = "Metro Finder";
 			productReference = 497001AA24A2717500EEF7C2 /* Metro Finder.app */;
 			productType = "com.apple.product-type.application.watchapp2-container";
@@ -191,6 +243,9 @@
 			dependencies = (
 			);
 			name = "Metro Finder WatchKit Extension";
+			packageProductDependencies = (
+				49FC537C24A7F5A900DE6FBF /* ComposableArchitecture */,
+			);
 			productName = "Metro Finder WatchKit Extension";
 			productReference = 497001BA24A2717700EEF7C2 /* Metro Finder WatchKit Extension.appex */;
 			productType = "com.apple.product-type.watchkit2-extension";
@@ -224,6 +279,9 @@
 				Base,
 			);
 			mainGroup = 497001A324A2717400EEF7C2;
+			packageReferences = (
+				49FC537924A7F45800DE6FBF /* XCRemoteSwiftPackageReference "swift-composable-architecture" */,
+			);
 			productRefGroup = 497001AB24A2717500EEF7C2 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -267,7 +325,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				49FC537824A7EA8000DE6FBF /* TimetableView.swift in Sources */,
 				497001C424A2717700EEF7C2 /* NotificationController.swift in Sources */,
+				4942E14624A672010010733F /* DepartureCellView.swift in Sources */,
+				4940217A24A9060900AD26D6 /* ServiceRowView.swift in Sources */,
+				4942E14324A671570010733F /* DepartureDetails.swift in Sources */,
+				495228FA24A8446800E7431F /* Helpers.swift in Sources */,
 				497001C224A2717700EEF7C2 /* ContentView.swift in Sources */,
 				497001C824A2717700EEF7C2 /* ComplicationController.swift in Sources */,
 				497001C024A2717700EEF7C2 /* Metro_FinderApp.swift in Sources */,
@@ -561,6 +624,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		49FC537924A7F45800DE6FBF /* XCRemoteSwiftPackageReference "swift-composable-architecture" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/pointfreeco/swift-composable-architecture.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.5.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		49FC537A24A7F45900DE6FBF /* ComposableArchitecture */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 49FC537924A7F45800DE6FBF /* XCRemoteSwiftPackageReference "swift-composable-architecture" */;
+			productName = ComposableArchitecture;
+		};
+		49FC537C24A7F5A900DE6FBF /* ComposableArchitecture */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 49FC537924A7F45800DE6FBF /* XCRemoteSwiftPackageReference "swift-composable-architecture" */;
+			productName = ComposableArchitecture;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 497001A424A2717400EEF7C2 /* Project object */;
 }

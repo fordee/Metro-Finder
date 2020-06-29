@@ -6,16 +6,17 @@
 //
 
 import SwiftUI
+import ComposableArchitecture
 
 @main
 struct Metro_FinderApp: App {
-    @SceneBuilder var body: some Scene {
-        WindowGroup {
-            NavigationView {
-                ContentView()
-            }
-        }
-
-        WKNotificationScene(controller: NotificationController.self, category: "myCategory")
+  @SceneBuilder var body: some Scene {
+    WindowGroup {
+      NavigationView {
+        ContentView()
+      }
     }
+    
+    WKNotificationScene(controller: NotificationController.self, category: "myCategory")
+  }
 }
