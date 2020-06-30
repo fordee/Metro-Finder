@@ -8,38 +8,30 @@
 import SwiftUI
 import Combine
 
-enum FetchState {
-   case fetching, success, failed
-}
-
 struct ContentView: View {
   @AppStorage("currentStop") private var currentStop = "3546"
   @AppStorage("displayAllStops") private var displayAllStops = false
-  
-  let stops: [MetStop] = [
-    MetStop(stopNumber: 3546, stopName: "Newlands Road"),
-    MetStop(stopNumber: 5016, stopName: "Wellington Station"),
-    MetStop(stopNumber: 5014, stopName: "Lambton Quay Stop B"),
-    MetStop(stopNumber: 5012, stopName: "Farmers"),
-    MetStop(stopNumber: 5010, stopName: "Cable Car Lane"),
-    MetStop(stopNumber: 5008, stopName: "Willis Street"),
-  ]
-  
-  
+
+  // Access the shared model object.
+  let data = MetroData.shared
   
   var body: some View {
     VStack {
       Picker(selection: $currentStop, label: EmptyView()) {
-        ForEach(stops) { stop in
+        ForEach(data.stops) { stop in
           Text("\(stop.stopName)").tag("\(stop.stopNumber)")
         }
       }
       .frame(minHeight: 44, maxHeight: 44)
-      NavigationLink(destination: TimetableView(stop: currentStop, displayAllStops: displayAllStops)) {
-        Label("Refresh", systemImage: "arrow.counterclockwise.circle")
-          .imageScale(.large)
+      NavigationLink(destination: TimetableView(stop: currentStop, displayAllStops: displayAllStops).environmentObject(data)) {
+        //Label("Timetable", systemImage: "bus")//"arrow.counterclockwise.circle")
+        HStack {
+          Image(systemName: "bus")
+            .imageScale(.large)
+            .padding(.horizontal, /*@START_MENU_TOKEN@*/10/*@END_MENU_TOKEN@*/)
+          Text("Timetable")
+        }
       }
-      //Spacer()
       Toggle(isOn: $displayAllStops) {
         Text("Display All Stops")
       }

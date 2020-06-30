@@ -20,6 +20,7 @@
 		497001C824A2717700EEF7C2 /* ComplicationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 497001C724A2717700EEF7C2 /* ComplicationController.swift */; };
 		497001CA24A2717800EEF7C2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 497001C924A2717800EEF7C2 /* Assets.xcassets */; };
 		497001CD24A2717800EEF7C2 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 497001CC24A2717800EEF7C2 /* Preview Assets.xcassets */; };
+		4992A8FF24ABAD9B0062A6B4 /* MetroData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4992A8FE24ABAD9B0062A6B4 /* MetroData.swift */; };
 		49FC537824A7EA8000DE6FBF /* TimetableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49FC537724A7EA8000DE6FBF /* TimetableView.swift */; };
 /* End PBXBuildFile section */
 
@@ -83,6 +84,7 @@
 		497001CC24A2717800EEF7C2 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		497001CE24A2717800EEF7C2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		497001CF24A2717800EEF7C2 /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
+		4992A8FE24ABAD9B0062A6B4 /* MetroData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetroData.swift; sourceTree = "<group>"; };
 		49FC537724A7EA8000DE6FBF /* TimetableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimetableView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -101,6 +103,7 @@
 			isa = PBXGroup;
 			children = (
 				4942E14224A671570010733F /* DepartureDetails.swift */,
+				4992A8FE24ABAD9B0062A6B4 /* MetroData.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -326,6 +329,7 @@
 				497001C824A2717700EEF7C2 /* ComplicationController.swift in Sources */,
 				497001C024A2717700EEF7C2 /* Metro_FinderApp.swift in Sources */,
 				497001C624A2717700EEF7C2 /* NotificationView.swift in Sources */,
+				4992A8FF24ABAD9B0062A6B4 /* MetroData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
